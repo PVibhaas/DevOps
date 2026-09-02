@@ -61,6 +61,9 @@
         <label>Phone number:</label>
         <input type="tel" id="pn" placeholder="Enter phone number">  
         <br><br>
+        <label>Alternate Phone number:</label>
+        <input type="tel" id="apn" placeholder="Enter alternate phone number">  
+        <br><br>
         <label>DOB:</label>
         <input type="date">
         <br><br>
@@ -96,6 +99,7 @@ function validate()
     let eid=document.getElementById("eid").value;
     let mail=document.getElementById("email").value;
     let num=document.getElementById("pn").value;
+    let num1=document.getElementById("apn").value;
     let sal=document.getElementById("sal").value;
 
     if(first=="")
@@ -123,6 +127,12 @@ function validate()
     }
 
     if(num.length!=10)
+    {
+        alert('Enter a valid phone number');
+        return false;
+    }
+
+    if(num1.length!=10)
     {
         alert('Enter a valid phone number');
         return false;
